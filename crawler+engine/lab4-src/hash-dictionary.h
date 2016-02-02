@@ -1,0 +1,40 @@
+
+// Implementation of a dictionary using a hash table
+
+#if !defined HASH_DICTIONARY_H
+#define HASH_DICTIONARY_H
+
+#include "dictionary.h"
+
+struct HashDictionaryEntry
+{
+	KeyType _key;
+	DataType  _data;
+	HashDictionaryEntry * _next;
+};
+
+class HashDictionary : public Dictionary
+{
+	// Add any member variables you need
+	enum { TableSize = 2039 };
+	HashDictionaryEntry ** buckets;
+
+	public:
+	// Constructor
+	HashDictionary();
+
+	// Add a record to the dictionary. Returns false if key already exists
+	bool addRecord( KeyType key, DataType record);
+
+	// Find a key in the dictionary and return corresponding record or NULL
+	DataType findRecord( KeyType key );
+
+	// Add other methods you may need
+	int hash(KeyType key);
+	
+	bool removeElement(KeyType key);
+   
+  	KeyType *keys(int * n);
+
+};
+#endif

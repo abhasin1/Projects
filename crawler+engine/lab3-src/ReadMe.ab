@@ -1,0 +1,15 @@
+Project - Lab3: Building a Web Crawler
+
+Made By - Arjun Bhasin
+
+Lore login - abhasin
+
+2) The list of features in the handout that work 
+
+All the features work but I am not taking care of <style> tags so it sometimes messes up the description.
+
+3) Extra Features
+
+I extract each and evry URL present even if its in the frame..
+
+
